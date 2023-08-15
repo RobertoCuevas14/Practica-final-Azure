@@ -7,10 +7,11 @@ describe('GET /', function () {
     request(app)
       .get('/')
       .expect(200)
-      .end(function (err, res) {
-        if (err) return done(err);
+      .end(function (err, res) 
+           { if (err) return done(err);
         expect(res.text).to.equal('¡Hola, mundo!');
         done();
+        
       });
   });
 });
