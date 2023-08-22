@@ -23,6 +23,14 @@ jobs:
           # Comandos para compilar la aplicación y ejecutar pruebas
           npm run build
           npm test
+
+          - name: Notificar en caso de fallos
+  if: failure()
+  uses: actions/sRObertoCuevas14  
+  with:
+    channel: Robel970914@gmail.com
+    status: failure
+
       - name: Desplegar en GitHub Pages
         run: |
           # Comando para desplegar en GitHub Pages
