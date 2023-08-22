@@ -1,0 +1,25 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código fuente
+        uses: actions/checkout@v2
+
+      - name: Configurar entorno
+        run: |
+          # Instalación de dependencias y configuración del entorno
+          npm install
+
+      - name: Compilar aplicación y ejecutar pruebas
+        run: |
+          # Comandos para compilar la aplicación y ejecutar pruebas
+          npm run build
+          npm test
