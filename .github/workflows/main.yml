@@ -23,3 +23,7 @@ jobs:
           # Comandos para compilar la aplicación y ejecutar pruebas
           npm run build
           npm test
+      - name: Desplegar en GitHub Pages
+        run: |
+          # Comando para desplegar en GitHub Pages
+          npm run deploy
